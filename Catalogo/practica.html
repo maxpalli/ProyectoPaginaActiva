@@ -1,0 +1,19 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Consulta Registro con AJAX</title>
+<!-- referenciamos al archivo ajax.js donde se encuentra nuestra funcion objetoAjax-->
+<script language="JavaScript" type="text/javascript" src="ajax.js"></script>
+</head>
+
+<body>
+<p>Consultar registros con ajax</p>"</p>"<p><!-- En "onsubmit" escribimos la función 'MostrarConsulta' que creamos en javascript, 
+con su parametro que es el archivo que vamos a mostrar, en este caso 'consulta.php'-->
+<form name="consulta" action="" onsubmit="MostrarConsulta('consulta.php'); return false">
+<label>
+<input type="submit" value="Consultar" />
+</label>
+</form>
+<div id="resultado"></div></body>
+
+</html>

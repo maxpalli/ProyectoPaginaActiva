@@ -1,0 +1,650 @@
+
+@font-face
+{
+  font-family: 'SF Funk Master';
+  font-style: oblique;
+  font-weight:  400px;
+  src:local('SF Funk Master'),local('SF Funk Master'),url(SFFunkMasterOblique.ttf) format(ttf);
+}
+
+
+@font-face
+{
+ font-family: 'Roboto'; 
+ font-style: normal; 
+ font-weight: 400; 
+ src: local('Roboto'), local('Roboto-Regular'), 
+ url(https://fonts.gstatic.com/s/roboto/v15/CWB0XYA8bzo0kSThX0UTuA.woff2) 
+ format('woff2'); 
+ unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; 
+}
+
+
+@font-face
+{  
+ font-family: 'Nunito';
+ font-style: normal;
+ font-weight: 400;
+ src: local('Nunito-Regular'), url(https://fonts.gstatic.com/s/nunito/v7/cSNs3NwpEgPVRQzvkh3NeQ.woff2) 
+ format('woff2');
+ unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+@font-face 
+{
+  font-family: 'Patua One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Patua One'), local('PatuaOne-Regular'), url(https://fonts.gstatic.com/s/patuaone/v6/yAXhog6uK3bd3OwBILv_SFtXRa8TVwTICgirnJhmVJw.woff2) 
+  format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+
+}
+
+.wrapper > * {
+  padding: 32px;
+  flex: 1 100%;
+}
+
+/*aqui esta css dela aside*/
+.header {
+  background: #da262d ;
+  display: flex;
+  padding: 10px;
+
+}
+
+.menu{
+  background : black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;  
+  display: flex; 
+  color:white ;
+  margin: 0px;
+  padding: 0px;  
+}
+
+
+.footer {
+  font-family: 'Roboto', sans-serif;  
+  background: black;    
+  font-size: 15px;  
+  color: white
+
+}
+
+.main {
+  text-align: left;
+  background: white;
+  display:  flex; 
+  flex-flow: row wrap;
+}
+
+
+/*aqui termina el aside*/
+.aside-1 {
+  background: white;
+
+
+}
+
+.aside-2 {
+  background: hotpink;
+}
+
+.aside-1
+ul{
+padding: 0;
+}
+
+.aside-1
+li:hover {
+    background-color: rgba(226,226,226,1);
+}
+
+.aside-1
+li {   
+   padding: 15px;
+   list-style: none;
+   border: 1px solid #C00
+}
+
+.bloqueLogo{
+    font-family: 'SF Funk Master';
+    font-size: 30px;
+    color: white;
+    flex: 4;   
+}
+
+.bloqueRedes{ 
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+   flex :1;
+   display: flex;
+  }
+
+.bloqueRedes 
+  img { 
+  width:50px;
+  margin: 8px;
+}
+
+
+.bloqueCel { 
+  border: 1px solid #C00; 
+  margin: 10px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+}
+
+.bloqueCel 
+  img { 
+  width:100%;
+  margin:0 auto; 
+ 
+}
+
+.menu
+ul{
+padding: 0px;
+}
+
+.menu
+li:hover {
+    background-color:  #da262d;
+}
+
+.menu
+li {   
+   padding: 15px;   
+   list-style: none;
+   display:  inline;
+}
+
+.footer
+p {
+   margin: 0px;
+   padding: 0px;
+}
+
+
+.bloquesCentrales{
+  background : black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;  
+  justify-content: space-between;  
+  display: flex;   
+  color:white ;
+  margin: 20px;
+  padding: 10px;  
+  width: 90%;
+
+}
+
+
+.bloquesContenido{
+  background : red;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;   
+  justify-content: space-between;
+  display: flex;   
+  color:white ;
+  margin: 20px;
+  padding: 10px; 
+  width: 90%; 
+}
+
+.Contenedor{
+  background : white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;   
+  justify-content: space-between;   
+  color:white ;
+  margin: 20px;
+  padding: 10px; 
+  width: 45%; 
+}
+
+.ContenedorDetalle{
+
+display: flex;
+
+}
+
+.ContenedorButton{
+
+
+
+}
+
+.ImagenPrincipalVistaDetalle{
+
+  -webkit-box-shadow: 10px 12px 33px 5px rgba(153,145,153,1);
+  -moz-box-shadow: 10px 12px 33px 5px rgba(153,145,153,1);
+  box-shadow: 10px 12px 33px 5px rgba(153,145,153,1);
+
+  background : white ;
+  margin: 15px;
+  padding: 0px; 
+  color: white;
+  flex:1.3;
+}
+
+.TablaDatos {
+  background: white ;
+  flex :2;
+}
+
+.TituloEquipo {
+  font-family: 'Patua One', cursive;
+  text-align: center;
+  background: white;
+  flex:2;
+}
+
+.CorreoElectronico{
+  font-family: 'Patua One', cursive;
+  text-align: left;
+  font-size:25px;
+  margin: 10px 0px 0px 0px;
+  flex:2;
+}
+
+.Flotante{
+   position: fixed;
+    background: #5AA09B;
+    width: 550px;
+    height: 500px;
+    color: white;
+    border-radius: 5px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0 auto;  
+    display:none;
+}
+
+
+.ocultar{
+  
+}
+
+@media all and (min-width: 600px) {
+  .aside { flex: 0.5 auto; }  
+}
+
+@media all and (min-width: 800px) {
+  .main    { flex: 3 0px; }
+  .aside-1 { order: 1; }
+  .main    { order: 2; }
+  .aside-2 { order: 3; }
+  .footer  { order: 4; }
+}
+
+
+
+@media all and (max-width: 650px){
+.bloquesCentrales{  width: 100%;}
+.bloquesContenido{  width: 100%;}
+}
+
+
+body {
+  padding: 0;
+  margin:0;
+
+}
+
+/*CARRUSEL   */
+
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;    
+
+  }
+
+/*FIN CARRUSEL*/
+
+
+/* INICIO ARCHIVO CSS PARA LA GRILLA */
+
+/*
+  Simple Grid
+  Learn More - http://dallasbass.com/simple-grid-a-lightweight-responsive-css-grid/
+  Project Page - http://thisisdallas.github.com/Simple-Grid/
+  Author - Dallas Bass
+  Site - dallasbass.com
+*/
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+}
+
+[class*='col-'] {
+  float: left;
+  padding-right: 20px; /* column-space */
+}
+
+.grid {
+  width: 100%;
+  max-width: 1140px;
+  min-width: 755px;
+  margin: 0 auto;
+  overflow: hidden;
+
+}
+
+.grid:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.grid-pad {
+  padding-top: 0px;
+  padding-left: 0px; /* grid-space to left */
+  padding-right: 0px; /* grid-space to right: (grid-space-left - column-space) e.g. 20px-20px=0 */
+
+} 
+
+.push-right {
+  float: right;
+}
+
+/* Content Columns */
+
+.col-1-1 {
+  width: 100%;
+}
+.col-2-3, .col-8-12 {
+  width: 66.66%;
+}
+
+.col-1-2, .col-6-12 {
+  width: 50%;
+}
+
+.col-1-3, .col-4-12 {
+  font-family: 'Nunito', sans-serif;
+  width: 33.33%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border: 1px solid black; 
+}
+
+.col-1-4, .col-3-12 {
+  width: 25%;
+}
+
+.col-1-5 {
+  width: 20%;
+}
+
+.col-1-6, .col-2-12 {
+  width: 16.667%;
+}
+
+.col-1-7 {
+  width: 14.28%;
+}
+
+.col-1-8 {
+  width: 12.5%;
+}
+
+.col-1-9 {
+  width: 11.1%;
+}
+
+.col-1-10 {
+  width: 10%;
+}
+
+.col-1-11 {
+  width: 9.09%;
+}
+
+.col-1-12 {
+  width: 8.33%
+}
+
+/* Layout Columns */
+
+.col-11-12 {
+  width: 91.66%
+}
+
+.col-10-12 {
+  width: 83.333%;
+}
+
+.col-9-12 {
+  width: 75%;
+}
+
+.col-5-12 {
+  width: 41.66%;
+}
+
+.col-7-12 {
+  width: 58.33%
+}
+
+
+
+/* Pushing blocks */
+
+.push-2-3, .push-8-12 {
+  margin-left: 66.66%;
+}
+
+.push-1-2, .push-6-12 {
+  margin-left: 50%;
+}
+
+.push-1-3, .push-4-12 {
+  margin-left: 33.33%;
+}
+
+.push-1-4, .push-3-12 {
+  margin-left: 25%;
+}
+
+.push-1-5 {
+  margin-left: 20%;
+}
+
+.push-1-6, .push-2-12 {
+  margin-left: 16.667%;
+}
+
+.push-1-7 {
+  margin-left: 14.28%;
+}
+
+.push-1-8 {
+  margin-left: 12.5%;
+}
+
+.push-1-9 {
+  margin-left: 11.1%;
+}
+
+.push-1-10 {
+  margin-left: 10%;
+}
+
+.push-1-11 {
+  margin-left: 9.09%;
+}
+
+.push-1-12 {
+  margin-left: 8.33%
+}
+
+
+@media handheld, only screen and (max-width: 767px) {
+  .grid {
+    width: 100%;
+    min-width: 0;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 20px; /* grid-space to left */
+    padding-right: 10px; /* grid-space to right: (grid-space-left - column-space) e.g. 20px-10px=10px */
+  }
+  
+  [class*='col-'] {
+    width: auto;
+    float: none;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 0px;
+    padding-right: 10px; /* column-space */
+
+  }
+  
+  
+  /* Mobile Layout */
+  
+  [class*='mobile-col-'] {
+    float: left;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    padding-left: 0px;
+    padding-right: 10px; /* column-space */
+    padding-bottom: 0px;
+  }
+  
+  .mobile-col-1-1 {
+    width: 100%;
+  }
+  .mobile-col-2-3, .mobile-col-8-12 {
+    width: 66.66%;
+  }
+
+  .mobile-col-1-2, .mobile-col-6-12 {
+    width: 50%;
+  }
+
+  .mobile-col-1-3, .mobile-col-4-12 {
+    width: 33.33%;
+  }
+
+  .mobile-col-1-4, .mobile-col-3-12 {
+    width: 25%;
+  }
+
+  .mobile-col-1-5 {
+    width: 20%;
+  }
+
+  .mobile-col-1-6, .mobile-col-2-12 {
+    width: 16.667%;
+  }
+
+  .mobile-col-1-7 {
+    width: 14.28%;
+  }
+
+  .mobile-col-1-8 {
+    width: 12.5%;
+  }
+
+  .mobile-col-1-9 {
+    width: 11.1%;
+  }
+
+  .mobile-col-1-10 {
+    width: 10%;
+  }
+
+  .mobile-col-1-11 {
+    width: 9.09%;
+  }
+
+  .mobile-col-1-12 {
+    width: 8.33%
+  }
+
+  /* Layout Columns */
+
+  .mobile-col-11-12 {
+    width: 91.66%
+  }
+
+  .mobile-col-10-12 {
+    width: 83.333%;
+  }
+
+  .mobile-col-9-12 {
+    width: 75%;
+  }
+
+  .mobile-col-5-12 {
+    width: 41.66%;
+  }
+
+  .mobile-col-7-12 {
+    width: 58.33%
+  }
+  
+  .hide-on-mobile {
+    display: none !important;
+    width: 0;
+    height: 0;
+  }
+}
+
+/* FIN ARCHIVO CSS PARA LA GRILLA */

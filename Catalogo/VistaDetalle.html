@@ -1,0 +1,180 @@
+ <!DOCTYPE html>
+<html>	
+<head>
+<link rel="stylesheet" href="estilos.css">	
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<div id="mensaje" class="ocultar"></div>
+<!--<a href="#" id="saludar" data-nombre="Max">Saludar</a>-->
+
+<style>
+#mensaje {
+    position: absolute;
+    background: #5AA09B;
+    width: 300px;
+    height: 200px;
+    color: white;
+    border-radius: 10px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0 auto;
+}
+.ocultar{
+    display: none;
+}
+</style>
+
+<script>
+$(document).ready( function(){
+    $("#saludar").on('click',function(e){
+        e.preventDefault();
+        var nombre = $(this).attr('data-nombre');
+        $.ajax({
+            type: "POST",
+            dataType: 'json',
+            url: "procesar.php",
+            data: { nombreProcesada: nombre },
+            cache: false,
+            success: function(respuesta) {
+                $("#mensaje").html(respuesta.mensaje);
+                $("#mensaje").removeClass("ocultar");
+            }
+        });
+        return false;
+    });
+});
+</script>
+
+</head>
+<body>
+	<div class="wrapper">
+		 		 <header class="header">		  	
+		  					<div class="bloqueLogo">Activa <img src="LogoClaro.png"  style="width: 60px; height: 60px;" > <br/>Distribuciones </div>					
+					  	<div class="bloqueRedes">
+		  					<img src="IconoFacebook.png" >
+		  					<img src="IconoGooglePlus.png" >
+			  				<img src="IconoYoutube.png" >
+						</div>		  	
+			    </header>
+
+				<Menu class="menu">
+					<ul>
+						<li>Inicio</li>
+						<li>Catalogo</li>
+						<li>Intranet</li>
+					</ul>	
+				</Menu>
+
+
+				<div class="main"> 
+							<div class="ContenedorDetalle">
+									<div class="ImagenPrincipalVistaDetalle">	
+										<img src="CelularEjemplo.jpg" >
+									</div>								
+
+									<div class="TablaDatos">	
+										<div class="TituloEquipo">
+											<h2>TITULO DEL CELULAR</h2>
+										</div>
+
+											<div class="grid grid-pad">
+    											<div class="col-1-3">
+       												<div class="content">
+           													<h3>CAMARA</h3>
+           														<div>DESCRIPCION DE ALGO 1</div>
+       												</div>
+    											</div>
+    											<div class="col-1-3">
+       												<div class="content">
+           													<h3>PROCESADOR</h3>
+           														<div>DESCRIPCION DE ALGO 2</div>
+       												</div>
+    											</div>
+    											<div class="col-1-3">
+       												<div class="content">
+           													<h3>MEMORIA RAM</h3>
+           														<div>DESCRIPCION DE ALGO 3</div>
+       												</div>
+    											</div>
+											</div>
+
+											<div class="grid grid-pad">
+    											<div class="col-1-3">
+       												<div class="content">
+           													<h3>MEMORIA</h3>
+           														<div>DESCRIPCION DE ALGO 4</div>
+       												</div>
+    											</div>
+    											<div class="col-1-3">
+       												<div class="content">
+           													<h3>BATERIA</h3>
+           														<div>DESCRIPCION DE ALGO 5</div>
+       												</div>
+    											</div>
+    											<div class="col-1-3">
+       												<div class="content">
+           													<h3>TECNOLOGIA</h3>
+           														<div>DESCRIPCION DE ALGO 6</div>
+       												</div>
+    											</div>
+											</div>
+
+											<div class="grid grid-pad">
+    											<div class="col-1-3">
+       												<div class="content">
+           													<h3>SISTEMA OPERATIVO</h3>
+           														<div>DESCRIPCION DE ALGO 7</div>
+       												</div>
+    											</div>
+    											<div class="col-1-3">
+       												<div class="content">
+           													<h3>DIMENSIONES</h3>
+           														<div>DESCRIPCION DE ALGO 8</div>
+       												</div>
+    											</div>
+    											<div class="col-1-3">
+       												<div class="content">
+           													<h3>ADICIONALES</h3>
+           														<div>DESCRIPCION DE ALGO 9</div>
+       												</div>
+    											</div>
+											</div>
+									</div>
+							</div>	
+
+						<div class="ContenedorButton">							
+							<input type="button"  id="saludar" name="btnllamar"  data-nombre="Max" value="Mostrar ventana"/>	  		
+						</div>
+				</div>
+
+
+			 	<footer class="footer">
+		  				<p>Puente Bolognesi # 106 - Arequipa - Arequipa</p>
+			  			<p>Calle Santo Domingo 201 Tienda A-6 - Arequipa - Arequipa</p>
+			  			<p>C. Ferial Andres Avelino Caceres Tienda 5 - Jose Luis Bustamante y Rivero</p>
+		  				<p>Mall Aventura Plaza M-21 2do Piso - Av. Porongoche - Paucarpata</p>
+		  				<p>C. Comercial Parque Lambramani 2do Piso stand 209 - Arequipa</p>
+				</footer>
+
+				<div id="ventana-flotante" class="Flotante"> 
+					<header class="header">		  	
+		  						<div class="bloqueLogo">Activa <img src="LogoClaro.png"  style="width: 60px; height: 60px;" > <br/>Distribuciones </div>				  	
+			    	</header>			    	
+			    	<div class="CorreoElectronico">Correo Electronico:</div>
+					<input type="text" size="40"   name="txtCorreoElectronico" padding="30px;" style="margin: 10px 0px 0px 0px;">
+					<div class="CorreoElectronico">Descripcion:</div>
+					<textarea name="comentarios" rows="10" cols="40" style="margin: 10px 0px 0px 0px;">Hola soy(Aqui debes de poner tu nombre) y te escribo de parte de Activa Distribuciones para 
+					</textarea>
+
+					<div><input type="button" name="btnEnviarCorreo" value="Enviar correo"/></div>
+					
+				</div>
+
+		</div>
+	
+</body>
+
+</html>
+
